@@ -25,19 +25,10 @@ class carro {
   }
 
   realizarViaje(consumo) {
-    if (this.encendido) {
-      if (consumo > this.gasolina) {
-        console.log(
-          "No puedo realizar el viaje por falta de gasolina" + this.gasolina
-        );
-      } else {
-        this.gasolina = this.gasolina - consumo;
-        return "le queda " + this.gasolina;
-      }
-    } else {
-      console.log("EL carro esta apagado");
-    }
-  }
-}
 
-console.log(carro);
+   if (!this.encendido) return console.log('El carro esta apagado');
+   if (consumo > this.gasolina) return console.log('No puedo realizar el viaje por falta de gasolina' + this.gasolina)
+       this.gasolina = this.gasolina - consumo;
+       return "le queda " + this.gasolina;
+      }
+    }
